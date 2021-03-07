@@ -116,7 +116,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  padding: 0 2rem 1.5rem 2rem;
+  padding: 0 2rem 0 2rem;
   border-radius: 0.7rem;
 
   background-color: #edd8dc;
@@ -155,6 +155,8 @@ body {
         & i {
           width: auto;
           margin-left: auto;
+
+          cursor: pointer;
         }
       }
 
@@ -174,6 +176,13 @@ body {
         background-color: #6f8efa;
       }
     }
+  }
+
+  &__info {
+    line-height: 4rem;
+    font-size: 0.7rem;
+
+    color: #888;
   }
 
   &__image {
