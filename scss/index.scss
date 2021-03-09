@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 i {
@@ -12,21 +13,22 @@ body {
   min-height: 100vh;
 
   font-size: 10px;
-  font-family: arial;
 }
 .site-nav {
   z-index: 1;
   padding: 0rem 0 2.8rem 2.8rem;
-  box-shadow: 2px 0px 0px 0px #ddd;
+  box-shadow: 2px 0px 0px 0px #eee;
 
   min-width: 15rem;
   flex-basis: 15%;
 
-  background-color: #f7f7f7;
+  background-color: #fafafe;
 
   &__title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
     line-height: 7.5rem;
+    letter-spacing: 0.1rem;
   }
 
   &__list {
@@ -41,7 +43,7 @@ body {
         padding: 0.3rem;
 
         text-decoration: none;
-        color: #999;
+        color: #aaa;
         transition: 0.3s;
 
         &:hover {
@@ -65,15 +67,17 @@ body {
   padding: 0 2.8rem 2.8rem 2.8rem;
   flex-grow: 1;
 
-  background-color: #e8e8fc;
+  background-color: #f5f5fd;
 }
 
 .site-header {
   display: flex;
 
   &__title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
     line-height: 7.5rem;
+    letter-spacing: 0.1rem;
   }
 
   &__list {
@@ -125,6 +129,8 @@ body {
     line-height: 4.5rem;
     font-size: 1.3rem;
     color: #f14b59;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
   }
 
   &__filters-list {
@@ -191,5 +197,89 @@ body {
     bottom: 0;
 
     height: 85%;
+  }
+}
+
+.sort-section {
+  margin-top: 4vh;
+  padding: 1.7rem 2rem 1.7rem 2rem;
+  border-radius: 0.7rem;
+  background-color: #fff;
+
+  &__list {
+    display: flex;
+
+    &__item {
+      width: 15%;
+
+      &__button {
+        text-decoration: none;
+        font-size: 1rem;
+
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f0dc";
+        }
+      }
+    }
+  }
+}
+
+.main-section {
+  margin-top: 4vh;
+  border-radius: 0.7rem;
+  background-color: #fff;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      padding: 0 2rem 0 2rem;
+      border-bottom: solid rgba($color: #000000, $alpha: 0.1) 0.05rem;
+
+      &__value {
+        width: 15%;
+        font-size: 1rem;
+        line-height: 4.4rem;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          color: #2957f7;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          color: #aaa;
+        }
+
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+          color: #f58c93;
+        }
+
+        &__status {
+          padding: 0.2rem 1rem;
+          border-radius: 0.5rem;
+
+          color: #fff;
+          background-color: red;
+
+          &--draft {
+            background-color: #f58c93;
+          }
+
+          &--paid {
+            background-color: #6f8efa;
+          }
+        }
+      }
+
+      &:nth-last-child(1) {
+        border: none;
+      }
+    }
   }
 }
